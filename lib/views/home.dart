@@ -116,7 +116,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                       style: TextStyle(color: Colors.white54),
                       onChanged: searchProducts,
                       decoration: InputDecoration(
-                        hintText: "Search for products",
+                        hintText: "Search",
                         hintStyle: TextStyle(color: Colors.white54),
                         prefixIcon: Icon(Icons.search, color: Colors.white),
                         border: OutlineInputBorder(
@@ -146,6 +146,18 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                 ],
               ),
               SizedBox(height: 20),
+              // Banner area menggunakan gambar
+              Container(
+                height: 120,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(16),
+                  image: DecorationImage(
+                    image: AssetImage("assets/homeScreen/bg_header.png"),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
               // Bagian Recommendation
               Text(
                 "Recommendation",
@@ -157,7 +169,8 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                   ? Expanded(
                 child: Center(
                   child: CircularProgressIndicator(
-                    valueColor: AlwaysStoppedAnimation<Color>(Colors.purple),
+                    valueColor:
+                    AlwaysStoppedAnimation<Color>(Colors.purple),
                   ),
                 ),
               )
@@ -178,7 +191,8 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                 child: GridView.builder(
                   padding: EdgeInsets.zero,
                   itemCount: filteredProducts.length,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  gridDelegate:
+                  SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     mainAxisSpacing: 16,
                     crossAxisSpacing: 16,
@@ -204,7 +218,8 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           ClipRRect(
-                            borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+                            borderRadius: BorderRadius.vertical(
+                                top: Radius.circular(16)),
                             child: Image.network(
                               product['image'],
                               fit: BoxFit.cover,
@@ -215,25 +230,30 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                              crossAxisAlignment:
+                              CrossAxisAlignment.start,
                               children: [
                                 Text(
                                   product['title'],
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 14,
-                                      color: Colors.black),
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 14,
+                                    color: Colors.black,
+                                  ),
                                 ),
                                 SizedBox(height: 4),
                                 Text(
                                   product['category'],
-                                  style: TextStyle(color: Colors.grey, fontSize: 12),
+                                  style: TextStyle(
+                                      color: Colors.grey,
+                                      fontSize: 12),
                                 ),
                                 SizedBox(height: 10),
                                 Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment:
+                                  MainAxisAlignment.spaceBetween,
                                   children: [
                                     Text(
                                       "\$${product['price']}",
@@ -248,9 +268,12 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                                       width: 28,
                                       decoration: BoxDecoration(
                                         color: Colors.black,
-                                        borderRadius: BorderRadius.circular(8),
+                                        borderRadius:
+                                        BorderRadius.circular(8),
                                       ),
-                                      child: Icon(Icons.add, color: Colors.white, size: 16),
+                                      child: Icon(Icons.add,
+                                          color: Colors.white,
+                                          size: 16),
                                     ),
                                   ],
                                 ),
