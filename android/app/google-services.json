@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "466807897382",
+    "project_id": "finalproject-sanberflutter",
+    "storage_bucket": "finalproject-sanberflutter.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:466807897382:android:594d429498479a427e95e7",
+        "android_client_info": {
+          "package_name": "com.example.final_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANOS_-T2LZSM2_lZsze9XONO-oGjcGPxQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
